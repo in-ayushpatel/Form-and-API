@@ -10,10 +10,12 @@ app.use(express.json())
 
 app.set('view engine', 'hbs');
 
+//test account id pass for the access in db included.
 const   dbURI = "mongodb+srv://ayushpatel:ayushpatel@cluster0.n6quf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology:true})
     .then((result) => {app.listen(3000)})
 
+//u can use POST req at '/'
 app.get("/",(req,res)=>{
     res.render('app')
 })
