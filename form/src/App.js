@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 
 function App() { 
+
+  // Hooks definatins
   const [formData, setFormData] = useState({
     "tag":[],
     "location": []
@@ -10,6 +12,7 @@ function App() {
   const [tag, setTag] = useState([]);
   const [location, setLocation] = useState([]);
 
+  // on KEY press for tags and location
   const onKeyDown = (e) => {
     const trimmedInput = location.trim();
     if ((e.key === ','|| e.key === 'Enter') && trimmedInput.length && !formData[e.target.name].includes(trimmedInput)) {
@@ -28,14 +31,15 @@ function App() {
     setIsKeyReleased(false);
   };
   
+  // key up for tags and location
   const onKeyUp = () => {
     setIsKeyReleased(true);
   }
-
+  // handle changes in tags/location
   const handleChangeTag = (e) => {
     (e.target.name==='location')? setLocation(e.target.value) : setTag(e.target.value);
   };
-
+  // delete tag takes in name and index (name = location,tag)
   const deleteTag = (e,name,index) => {
     e.preventDefault()
     let temData = formData[name];
@@ -45,6 +49,7 @@ function App() {
       [name]:   temData
     })
   }
+  // handle change for inputs
   const handleChange = (e) => { 
     e.preventDefault()
     setFormData({
@@ -54,7 +59,7 @@ function App() {
   };
 
 
-  //onSubmit
+  //onSubmit API call is made in here.
   const addPost = async (e) => {
     e.preventDefault();
     try {
@@ -79,6 +84,7 @@ function App() {
     }
   };
 
+  // return
   return (
     <div className="App">
       <h3 style={{fontSize:"20px"}}>Post Job</h3>
