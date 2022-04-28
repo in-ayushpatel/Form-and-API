@@ -1,0 +1,120 @@
+.App {
+  margin: 0 50px;
+}
+.tittle{
+  color: #1e8f74;
+}
+
+.input-form{
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0 10px;
+  border: solid 1px;
+  border-color: gray;
+  outline: 0;
+  outline-color: #1e8f74;
+  margin-top: 10px;
+}
+
+.experience select{
+  width: 48%;
+}
+
+.experience{
+  display: flex;
+  justify-content: space-between ;
+}
+#c{
+  width: 100%;
+}
+#f{
+  width: 100%;
+}
+.wrap{
+  width: 48%;
+}
+
+.container {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  border: 1px grey solid;
+  border-radius: 5px;
+  color: black
+}
+
+.container input {
+  width: 100%;
+  min-width: 50%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.labels{
+  padding: 20px;
+}
+
+.tagshow{
+  display: inline-flex;
+}
+
+.tag {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  margin: 7px 0;
+  margin-right: 10px;
+  padding: 0 10px;
+  padding-right: 5px;
+  border: 1px solid #1e8f74;
+  border-radius: 5px;
+  background-color: #1e8f74;
+  white-space: nowrap;
+  color: white;
+}
+
+.tag button {
+  display: flex;
+  padding: 6px;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+  color: white;
+}
+
+.submit{
+  background-color:#1e8f74;
+  color: white;
+  padding: 5px;
+  width: 100px;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 2px;
+  border: 2px #1e8f74 solid;
+  cursor: pointer;
+}
+
+.post{
+  background-color:#1e8f74;
+  color: white;
+  width: 100px;
+  border: 2px #1e8f74 solid;
+}
+
+.another{
+  background-color: white;
+  color: #1e8f74;
+  width: 250px;
+  border: 2px #1e8f74 solid;
+  margin: 0 10px;
+}
+
+.cancel{
+  background-color: white;
+  color: rgb(0, 103, 194);
+  width: 70px;
+  border: 2px white solid;
+}
